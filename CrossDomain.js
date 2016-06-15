@@ -1,3 +1,11 @@
+//script tag request cross domain
+//php response : ‘fn('+$json+')'
+var script = document.createElement('script')
+script.src = 'http://wwww.example.com/test.php?fn=fn'
+function fn(data) {
+    console.log(data)
+}
+
 // 1、请求外部api会遇到跨域问题.这里有个小办法跨域进行解决
 $.ajax({
     url:url,// 外部api请求
